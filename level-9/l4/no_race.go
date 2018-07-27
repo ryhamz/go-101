@@ -1,15 +1,16 @@
 package main
 
 import (
-"fmt"
-"sync")
+	"fmt"
+	"sync"
+)
 
 var value int
 var wg sync.WaitGroup
 var m sync.Mutex
 
 func increment() {
-	
+
 	m.Lock()
 	curr_val := value
 	curr_val += 1
